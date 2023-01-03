@@ -78,8 +78,16 @@ terraform destroy -var 'project_name=YOUR_PROJECT_NAME'
 terraform plan -var="GIT_USRENAME=<YOUR_GIT_USRENAME>" -var="GIT_PERSONAL_ACCESS_TOKEN=<YOUR_PAT>"
 ```
 
-##
+## Start self hosted agent
 
 ```
 docker run -e AZP_URL=https://dev.azure.com/bomc -e AZP_TOKEN=<YOUR_AZP_TOKEN> -e AZP_POOL=Selfhosted-Agent-Ubuntu-20.04 bomc/dockeragent:ubuntu-20.04
+```
+
+## NOTE
+When you deploy this project to azdo, ensure the self hostet agent is running. 
+Otherwise the following exception is shown, after pipeline start:
+
+```
+VS800075: The project with id '8d35b9d6-6eca-463f-a716-d200d5ce71e5' does not exist, or you do not have permission to access it.
 ```
