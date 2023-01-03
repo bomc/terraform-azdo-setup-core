@@ -11,6 +11,6 @@ resource "azuredevops_build_definition" "setup_core_build_definition" {
     repo_type = "TfsGit"
     repo_id = azuredevops_git_repository.core_repository.id
     branch_name = azuredevops_git_repository.core_repository.default_branch
-    yml_path = "azure-pipelines.yml"
+    yml_path = "pipelines/azure-pipeline-setup-core.yaml"
   }
 }
