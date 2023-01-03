@@ -1,0 +1,12 @@
+trigger: none
+
+pool: SelfHosted
+
+variables:
+  - group: core_variable_group
+
+jobs:
+  - job: validate
+    displayName: Execute a inline skript"
+    script: |
+      echo "Inline skript"
