@@ -27,3 +27,8 @@ variable DOCKERHUB_PERSONAL_ACCESS_TOKEN {
     type = string
     description = "The DockerHub personal access token is injected as environment variable, see '.env.tmp' file"
 }
+
+variable DOCKERHUB_EMAIL {
+    type = string
+    description = "The DockerHub email as environment variable, see '.env.tmp' file"
+}
