@@ -5,9 +5,11 @@
 - https://melcher.dev/2019/02/create-an-azure-devops-build/release-agent-with-terraform-ubuntu-edition/
 - https://github.com/spacelift-io-blog-posts/Blog-Technical-Content
 - https://spacelift.io/blog/terraform-tfvars
+- https://thomasthornton.cloud/2021/05/24/create-an-azure-devops-self-hosted-linux-agent-virtual-machine-using-terraform/
 - https://github.com/thomast1906/thomasthorntoncloud-examples ++
 - https://blog.johnfolberth.com/category/professional/terraform/
 - https://blog.johnfolberth.com/securely-populating-azure-key-vault-via-azure-devops/
+- https://zditect.com/blog/35172566.html
 
 ## Get credentials
 To interract with Azure DevOps:

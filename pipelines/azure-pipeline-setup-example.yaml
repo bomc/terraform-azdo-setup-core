@@ -14,16 +14,8 @@ stages :
           displayName: 'Show working directory'
           inputs:
             targetType: inline
-            failOnStderr: true
-            workingDirectory: $(System.DefaultWorkingDirectory)/iac/core
             script: |
               echo "Testing ADO Agent, show default working directory:"
               echo $(System.DefaultWorkingDirectory)
-        - task: Bash@3
-          displayName: 'Perform terraform init'
-          inputs:
-            targetType: inline
             failOnStderr: true
-            workingDirectory: $(System.DefaultWorkingDirectory)/iac/core
-            script: |
-              ls -al
+            workingDirectory: $(System.DefaultWorkingDirectory)
