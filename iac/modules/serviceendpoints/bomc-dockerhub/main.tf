@@ -5,5 +5,5 @@ resource "azuredevops_serviceendpoint_dockerregistry" "bomc-serviceendpoint-dock
   docker_username         = var.docker_username
   docker_password         = var.docker_password
   docker_email            = var.docker_email
-  registry_type           = "Dockerhub"
+  registry_type           = "DockerHub"
 }
