@@ -84,6 +84,10 @@ terraform plan -var="GIT_USRENAME=<YOUR_GIT_USRENAME>" -var="GIT_PERSONAL_ACCESS
 
 ```
 docker run -e AZP_URL=https://dev.azure.com/bomc -e AZP_TOKEN=<YOUR_AZP_TOKEN> -e AZP_POOL=Selfhosted-Agent-Ubuntu-20.04 bomc/dockeragent:ubuntu-20.04
+
+# Run a command in a running docker container.
+docker ps
+docker exec -it <CONTAINER ID> /bin/bash
 ```
 
 ## NOTE
@@ -92,4 +96,36 @@ Otherwise the following exception is shown, after pipeline start:
 
 ```
 VS800075: The project with id '8d35b9d6-6eca-463f-a716-d200d5ce71e5' does not exist, or you do not have permission to access it.
+```
+
+###  Procedure for creating the azuredevops infrastructure
+
+Base project
+
+* From directoy 'terraform-setup azure/iac/core'
+
+```
+# set environment variables
+source .env.tmp
+# check environment variables
+env
+# perform terraform commands
+terrafrom init
+terraform plan
+terraform apply
+```
+
+Application project
+
+* From directoy 'terraform-setup azure/iac'
+
+```
+# ensure environment variables are set
+source .env.tmp
+# check environment variables
+env
+# perform terraform commands
+terrafrom init
+terraform plan
+terraform apply
 ```
